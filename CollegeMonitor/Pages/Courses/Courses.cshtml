@@ -5,20 +5,25 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">SN</th>
       <th scope="col">Name</th>
       <th scope="col">TextBook</th>
       <th scope="col">CreditHrs</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     @foreach(var course in Model.Courses)
     {
         <tr>
-            <th scope="row">1</th>
+            <td>@course.Id</td>
             <td>@course.Name</td>
             <td>@course.TextBook</td>
             <td>@course.CreditHrs</td>
+            <td>
+            <a href="/courses/edit/@course.Id" ><i class="bi bi-pencil text-warning"></i></a>
+            <a href="/courses/delete/@course.Id" ><i class="bi bi-trash3 text-danger"></i></a>
+            </td>  
         </tr>
     }
   </tbody>
