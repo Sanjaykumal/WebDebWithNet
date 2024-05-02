@@ -15,6 +15,6 @@ public class EditCourseModel: PageModel
       db.Courses.Update(Course);
       db.SaveChanges();
 
-      return RedirectToPage(Course);
+      return RedirectToPage("Courses");
     }
 }
