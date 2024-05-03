@@ -11,6 +11,9 @@
                 @Html.DisplayNameFor(model => model.Session[0].Title)
             </th>
             <th>
+                Course
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Session[0].Details)
             </th>
             <th>
@@ -28,6 +31,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
+            <td>
+                    @(item.Course?.Name ?? "N/A")
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Details)
             </td>
